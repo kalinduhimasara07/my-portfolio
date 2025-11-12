@@ -13,7 +13,7 @@ export const projects = [
     description:
       "A modern e-commerce website with user authentication, secure checkout, and an advanced admin dashboard for managing products, users, and orders.",
     tags: ["MERN Stack", "Tailwind CSS"],
-    image: "https://placehold.co/600x400/1e293b/94a3b8?text=Lumineé+Project",
+    image: "https://biopyihfouuryzhiholm.supabase.co/storage/v1/object/sign/My-Images/Screenshot%202025-11-12%20222824.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jZDlkNzI5OS1lY2U5LTRhNzctOThmNC0xMjljOGE3ZDE0ZmUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJNeS1JbWFnZXMvU2NyZWVuc2hvdCAyMDI1LTExLTEyIDIyMjgyNC5wbmciLCJpYXQiOjE3NjI5NjY3OTEsImV4cCI6MTkyMDY0Njc5MX0.AeL2H9z38L-vvODfuAGM5iJ98zwYMr0mv4O4raTlhWw",
     liveUrl: "https://www.crystalbeautyclear.me/",
     githubUrl: "https://github.com/kalinduhimasara07",
   },
