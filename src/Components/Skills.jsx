@@ -1,32 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Code,
-  Server,
-  Database,
-  Cloud,
-  Container,
-  Github,
-  Figma,
-  BrainCircuit,
-  Settings,
-} from "lucide-react";
 import { Section } from "./common/Section";
 import { skills } from "../data/skills";
 import { containerVariants, itemVariants } from "../utils/animations";
-
-// Icon mapping
-const iconMap = {
-  Code: Code,
-  Server: Server,
-  Database: Database,
-  Cloud: Cloud,
-  Container: Container,
-  Github: Github,
-  Figma: Figma,
-  BrainCircuit: BrainCircuit,
-  Settings: Settings,
-};
 
 export const Skills = () => {
   return (
@@ -39,7 +15,7 @@ export const Skills = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         {skills.map((skill) => {
-          const IconComponent = iconMap[skill.icon];
+          const IconComponent = skill.icon;
           return (
             <motion.div
               key={skill.name}

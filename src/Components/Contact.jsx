@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Linkedin, Github } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Section } from "./common/Section";
 import { SocialLink } from "./common/SocialLink";
 import { userProfile } from "../data/userProfile";
@@ -8,6 +9,7 @@ import { containerVariants, itemVariants } from "../utils/animations";
 
 export const Contact = () => {
   const phoneHref = `tel:${userProfile.contact.phone.replace(/\s+/g, "")}`;
+  const whatsappHref = `https://wa.me/${userProfile.contact.phone.replace(/\D/g, "")}`;
 
   return (
     <Section id="contact" title="Get In Touch">
@@ -24,6 +26,7 @@ export const Contact = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
+          {/* Email */}
           <motion.a
             href={`mailto:${userProfile.contact.email}`}
             className="flex items-center p-4 bg-slate-800 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-all duration-300"
@@ -34,8 +37,9 @@ export const Contact = () => {
             <span>{userProfile.contact.email}</span>
           </motion.a>
 
-          {/* Grouped Phone + Location for large screens */}
+          {/* Phone, WhatsApp, and Address group */}
           <div className="flex flex-col lg:flex-row items-center gap-8">
+            {/* Phone */}
             <motion.a
               href={phoneHref}
               className="flex items-center p-4 bg-slate-800 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-slate-700 transition-all duration-300"
@@ -46,6 +50,20 @@ export const Contact = () => {
               <span>{userProfile.contact.phone}</span>
             </motion.a>
 
+            {/* WhatsApp */}
+            <motion.a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center p-4 bg-slate-800 rounded-lg text-gray-300 hover:text-green-400 hover:bg-slate-700 transition-all duration-300"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaWhatsapp size={24} className="mr-3 text-green-500" />
+              <span>WhatsApp</span>
+            </motion.a>
+
+            {/* Address */}
             <motion.div
               className="flex items-center p-4 bg-slate-800 rounded-lg text-gray-300"
               variants={itemVariants}
@@ -56,6 +74,7 @@ export const Contact = () => {
           </div>
         </motion.div>
 
+        {/* Social Links */}
         <div className="flex justify-center space-x-8 mt-12">
           <SocialLink
             href={userProfile.socials.linkedin}
