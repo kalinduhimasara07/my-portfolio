@@ -1,0 +1,41 @@
+/* src/index.css or src/App.css */
+@import "tailwindcss";
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-slate-900 text-gray-100;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for a modern feel */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #38bdf8 #1e293b;
+  }
+
+  /* Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cyan-500 rounded-md;
+    border: 2px solid theme('colors.slate.800');
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyan-400;
+  }
+}
