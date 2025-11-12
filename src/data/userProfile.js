@@ -9,8 +9,8 @@ export const userProfile = {
   roles: [
     "Full Stack Developer",
     "Software Engineer",
-    "Front End Engineer",
-    "Back End Engineer",
+    "Front End Developer",
+    "Back End Developer",
   ],
   summary:
     "Passionate Computer Technology undergraduate at Uva Wellassa University of Sri Lanka with hands-on experience in full-stack development using Spring Boot, React, and the MERN stack. Skilled in building scalable and efficient web applications, with practical knowledge of Docker, API integration, and database management using PostgreSQL and MongoDB. Strong problem-solving abilities with a logical and structured approach to software development. Dedicated to continuous learning and delivering reliable, high-quality solutions that create real value for users.",
